@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.names{
+  font-weight: 500;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  background-color: rgb(255, 254, 238);
+  overflow-x: hidden;
+}
+
+.navbar{
+  padding: 30px 70px 16px;
+}
+
+.sideNav{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  text-align: center;
+  padding: 20px 0;
+  /* margin-right: 50px; */
+}
+
+.sideNav button{
+  padding: 3px 16px;
+  display: grid;
+  gap: 10px;
+  padding: 10px 0;
+  color: #630470;
+  border-top: 1px solid rgb(177, 177, 177);
+}
+
+.sideNav button:hover{
+  background-color: #e4e4e4;
+}
+
+.sideNav button i{
+  font-size: 20px;
+}
+
+.sideNav img{
+  margin: 30px auto;
+  width: 70%;
+}
+
+.fa-xmark, .fa-bars{
+  color: #fff;
+  cursor: pointer;
+  background-color: #630470;
+  padding: 16px 10px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 6;
+}
+
+.fa-search{
+  background-color: #630470;
+  color: #fff;
+  border-top: 2px solid #630470;
+  border-left: 2px solid #630470;
+  border-bottom: 2px solid #630470;
+  padding: 10px 16px;
+  border-radius: 20px 0 0 20px;
+  border-right: none;
+}
+
+.fa-user, .fa-envelope, .fa-phone, .fa-home{
+  background-color: #630470;
+  color: #fff;
+  padding: 9px 10px;
+  height: 35px;
+  border-right: none;
+}
+
+.search, .formGroup{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input{
+  background-color: transparent;
+  width: 400px;
+  border-top: 2px solid #630470;
+  border-right: 2px solid #630470;
+  border-bottom: 2px solid #630470;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 0 20px 20px 0;
+  border-left: none;
+}
+
+.search input:focus{
+  outline: none;
+}
+
+.active{
+  border-right: 5px solid #630470;
+}
+
+.table{
+  box-shadow: none !important;
+  
+}
+
+.tableContainer{
+  margin-bottom: 12rem;
+  box-shadow: 20px 20px 40px rgb(211, 211, 211) !important;
+  border: 1px solid #dddddd;
+}
+
+.adminPassModal{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background-color: #e4e4e4;
+  padding: 20px;
+  border-radius: 10px;
+  height: 220px;
+  width: 320px;
+  z-index: 10;
+}
+
+.addStudentModal{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e4e4e4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  z-index: 10;
+  padding-bottom: 80px;
+  padding-top: 40px;
+}
+
+.addStudentModal input[type="submit"]{
+  border: none;
+}
+
+#modalClose{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+
+.adminPassModal div{
+  margin-top: 40px;
+}
+
+.addStudentModal div{
+  margin-top: 20px;
+}
+
+/* , .addStudentModal div input */
+
+.adminPassModal div input{
+  width: 255px;
+  height: 35px;
+  background-color: transparent;
+  margin-top: 10px;
+  border: 2px solid #630470;
+  outline: none;
+  padding-left: 5px;
+}
+
+.addStudentModal div input{
+  width: 255px;
+  height: 35px;
+  background-color: transparent;
+  border: 2px solid #630470;
+  border-left: none;
+  outline: none;
+  padding-left: 5px;
+}
+
+.submitBtn{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: #630470;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+.addStudentSubmitBtn{
+  position: absolute;
+  right: 28px;
+  bottom: 16px;
+  background-color: #630470;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.modalWrapper{
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.navWrapper{
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.singleStudentComponent{
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  all: unset;
+  cursor: pointer;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #630470;
+  padding: 10px 30px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p{
+  margin: 3px;
+}
+
+tr{
+  user-select: none;
+  position: relative;
+}
+
+.actions{
+  position: absolute;
+  top: 28px;
+  right: 38px;
+  background-color: rgb(214, 214, 214);
+  border-radius: 7px;
+  padding: 5px 0;
+  width: 50px;
+  text-align: center;
+}
+
+.actions p{
+  cursor: pointer;
+}
+
+.edit{
+  background-color: #f8be00;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete{
+  background-color: #e7195a;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.optionsComponent{
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.optionsComponentModal{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background-color: #e4e4e4;
+  padding: 20px 20px 100px;
+  border-radius: 10px;
+  height: 130px;
+  width: 200px;
+  z-index: 10;
+}
+
+@media screen and (max-width:576px) {
+  .dashBoard{
+    padding: 0 1rem;
+  }
+
+  .navbar{
+    padding: 30px 10px;
+  }
+
+  .footer{
+    flex-direction: column-reverse;
+  }
+
+  .search input{
+    width: 280px;
+    margin:0 auto;
+  }
+}
