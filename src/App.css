@@ -83,7 +83,7 @@ body{
   border-right: none;
 }
 
-.fa-user, .fa-envelope, .fa-phone, .fa-home{
+.fa-user, .fa-envelope, .fa-phone, .fa-home, .fa-calendar{
   background-color: #630470;
   color: #fff;
   padding: 9px 10px;
@@ -340,14 +340,14 @@ tr{
   z-index: 10;
 }
 
-.trainingStatus p{
+/* .completedState{
   background-color: #00cf5d;
-  /* padding: 1px; */
-  text-align: center;
-  color: #fff;
-  width: 70px;
-  border-radius: 5px;
-}
+  height: 25px;
+  width: 25px;
+  margin: 0 auto;
+  background-color: #cf0034;
+  border-radius: 50%
+} */
 
 @media screen and (max-width:1200px) {
   .studentAddress{
