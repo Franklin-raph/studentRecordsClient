@@ -18,19 +18,70 @@ const StudentTableComponent = ({ allStudents }) => {
   }
 
   const completedState = {
-    height: "20px",
-    width: "20px",
+    height: "22px",
+    width: "22px",
     margin: "0 auto",
     backgroundColor: "#cf0034",
-    borderRadius: "50%"
+    borderRadius: "50%",
+    textAlign:"center",
+    color:"#fff",
+    display: "flex",
+    alignItems: "center",
+    justifyContent:"center",
+    padding:"10px"
   };
 
+//   address
+// : 
+// "Amawbia, Anambra state"
+// createdAt
+// : 
+// "2022-10-04T10:35:08.503Z"
+// email
+// : 
+// "uebuka15@gmail.com"
+// fName
+// : 
+// "Uchechukwu"
+// lName
+// : 
+// "Chukwuebuka"
+// phoneNum
+// : 
+// "08133822952"
+
+
+// address
+// : 
+// "BEHIND EKE AFOR MARKET, NISE AWKA SOUTH"
+// createdAt
+// : 
+// "2022-10-04T10:19:49.829Z"
+// email
+// : 
+// "anyaebuka@gmail.com"
+// fName
+// : 
+// "FESTUS"
+// lName
+// : 
+// "CHESIKE"
+// phoneNum
+// : 
+// "07031944427"
+
   const activeState = {
-    height: "20px",
-    width: "20px",
+    height: "22px",
+    width: "22px",
     margin: "0 auto",
     backgroundColor: "#00cf5d",
-    borderRadius: "50%"
+    borderRadius: "50%",
+    textAlign:"center",
+    color:"#fff",
+    display: "flex",
+    alignItems: "center",
+    justifyContent:"center",
+    padding: "10px"
   };
 
   return (
@@ -85,9 +136,10 @@ const StudentTableComponent = ({ allStudents }) => {
                   {student.address}
                 </td>
                 <td className='trainingStatus'>
-                  {/* {student.trainingStatus === "Completed" ?} */}
+                  {console.log(student.trainingStatus.charAt(0))}
                   <p style={student.trainingStatus === "Completed" ? 
                     completedState : activeState}>
+                    {student.trainingStatus.charAt(0)}
                   </p>
                 </td>
                 <td style={{textAlign:'center', color:'#630470'}}>

@@ -24,6 +24,18 @@ const Leftnav = ({ setIsLeftNavOpen }) => {
                     <p>Add Student</p>
                 </button>
             </div>
+            <div className="keys">
+              <h6>Training Status</h6>
+              <div>
+                <span className="activeTrainingColor"></span>
+                <span className="trainingText">Active</span>
+              </div>
+
+              <div>
+                <span className="completedTrainingColor"></span>
+                <span className="trainingText">Completed</span>
+              </div>
+            </div>
         </div>
     </>
   )

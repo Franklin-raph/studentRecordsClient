@@ -34,7 +34,7 @@ body{
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  width: 150px;
+  width: 180px;
   text-align: center;
   padding: 20px 0;
   /* margin-right: 50px; */
@@ -340,6 +340,32 @@ tr{
   z-index: 10;
 }
 
+.keys{
+  position: fixed;
+  bottom: 20px;
+  z-index: 9999;
+  left: 30px;
+}
+
+.keys div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.activeTrainingColor{
+  background-color: #00cf5d;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%
+}
+
+.completedTrainingColor{
+  background-color: #cf0034;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%
+}
 /* .completedState{
   background-color: #00cf5d;
   height: 25px;
