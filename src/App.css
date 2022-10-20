@@ -75,7 +75,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   z-index: 99;
   top: 50%;
   left: 50%;
@@ -112,7 +112,7 @@ html, body{
 }
 
 .navbar{
-  padding: 20px 70px 16px;
+  padding: 16px 70px;
   /* position: fixed; */
   top: 0;
   width: 100%;
@@ -123,7 +123,7 @@ html, body{
   left: 0;
   top: 0;
   z-index: 8;
-  height: 100vh;
+  height: 150vh;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -224,7 +224,7 @@ html, body{
 .adminPassModal{
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 50%;
   transform: translate(-50%, -50%);
   background-color: #e4e4e4;
   padding: 20px;
@@ -314,7 +314,7 @@ html, body{
 .modalWrapper{
   background-color: rgba(0, 0, 0, 0.4);
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   z-index: 9;
   top: 50%;
   left: 50%;
@@ -336,7 +336,7 @@ html, body{
 .singleStudentComponent{
   background-color: rgba(0, 0, 0, 0.7);
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   z-index: 15;
   top: 50%;
   left: 50%;
@@ -408,7 +408,7 @@ tr{
 .optionsComponent{
   background-color: rgba(0, 0, 0, 0.7);
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   z-index: 9;
   top: 50%;
   left: 50%;
@@ -437,7 +437,7 @@ tr{
   position: fixed;
   bottom: 20px;
   z-index: 9999;
-  left: 30px;
+  left: 10px;
 }
 
 .keys div{
@@ -468,13 +468,18 @@ tr{
   border-radius: 50%
 } */
 
+tbody td{
+  padding-bottom: 0 !important;
+  height: 0 !important;
+}
+
 @media screen and (max-width:1200px) {
-  .studentAddress{
+  /* .studentAddress{
     overflow: hidden;
     -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-  }
+  } */
 }
 
 @media screen and (max-width:576px) {
@@ -482,17 +487,30 @@ tr{
     padding: 0 1rem;
   }
 
+  .tableContainer p, .tableContainer th{
+    font-size: 14px;
+  }
+
   .navbar{
-    padding: 30px 10px;
+    padding: 20px 10px;
   }
 
   .footer{
-    flex-direction: column-reverse;
+    padding: 8px 10px;
+  }
+
+  .footer p{
+    /* flex-direction: column-reverse; */
+    margin: 0;
+    font-size: 12px;
   }
 
   .search input{
     width: 280px;
-    margin:0 auto;
+  }
+
+  input::placeholder{
+    font-size: 12px;
   }
 
   .loader-parent { 
