@@ -33,13 +33,17 @@
 
 .loader-parent::before {
   content:'';
-  border:1px solid #630470; 
+  /* border:1px solid #630470;  */
+  background-color: #fff;
   border-radius:10px;
   position:absolute;
   top:-4px; 
   right:-4px; 
   bottom:-4px; 
   left:-4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loader-parent .loading-bar { 
@@ -47,10 +51,11 @@
   border-radius:10px;
   top:0;
   right:100%;
-  bottom:0;
+  bottom:0px;
   left:0;
   background:#630470; 
   width:0;
+  height: 4px;
   animation: loader 2s linear infinite;
 }
 
