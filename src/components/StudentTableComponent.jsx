@@ -136,7 +136,7 @@ const StudentTableComponent = ({ allStudents }) => {
                   <p>Male</p>
                 </td>
                 <td className='trainingStatus'>
-                  {console.log(student.trainingStatus.charAt(0))}
+                  {/* {console.log(student.trainingStatus.charAt(0))} */}
                   <p style={student.trainingStatus === "Completed" ? 
                     completedState : activeState}>
                     {student.trainingStatus.charAt(0)}

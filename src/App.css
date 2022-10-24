@@ -176,7 +176,7 @@ html, body{
   border-right: none;
 }
 
-.fa-user, .fa-envelope, .fa-phone, .fa-home, .fa-calendar{
+.fa-user, .fa-envelope, .fa-phone, .fa-home, .fa-calendar, .fa-clock{
   background-color: #630470;
   color: #fff;
   padding: 9px 10px;
@@ -240,12 +240,50 @@ html, body{
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: #e4e4e4;
-  padding: 20px;
+  padding:40px 20px;
   border-radius: 10px;
   width: 350px;
   z-index: 10;
+}
+
+.ViewStudentsDetails{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e4e4e4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  z-index: 12;
   padding-bottom: 80px;
   padding-top: 40px;
+}
+
+.detailsGroup p{
+  margin-bottom: 0;
+}
+
+.detailsGroup{
+  display: flex;
+  align-items: center;
+  height: 10px;
+}
+
+.detailsGroup .fa-solid{
+  color: #630470;
+  background-color: transparent;
+}
+
+#viewstudentModalClose{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 13;
+}
+
+.viewStudentsDetails{
+  color: #000;
 }
 
 .addStudentModal input[type="submit"]{
@@ -257,7 +295,6 @@ html, body{
   right: 10px;
   top: 10px;
 }
-
 
 .adminPassModal div{
   margin-top: 40px;
@@ -299,11 +336,16 @@ html, body{
   border-radius: 7px;
 }
 
+.viewAndUpdateButton{
+  display: flex;
+  justify-content: flex-end;
+}
+
 .addStudentSubmitBtn{
-  position: absolute;
+  /* position: absolute;
   right: 28px;
-  bottom: 16px;
-  background-color: #630470;
+  bottom: 16px; */
+  background-color: #630470 !important;
   color: #fff;
   padding: 5px 10px;
   border-radius: 7px;
