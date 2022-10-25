@@ -24,7 +24,7 @@ const ViewStudentsDetails = ({setStudentDetails}) => {
           </div>
 
           <div className="detailsGroup">
-                <i class="fa-brands fa-github"></i>
+                <i className="fa-brands fa-github"></i>
                 <a href='https://github.com' target="_blank">github</a>
           </div>
 

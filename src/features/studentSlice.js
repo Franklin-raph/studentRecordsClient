@@ -1,11 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 const LOCAL_BASE_URL = "http://localhost:5000/api/v1/student"
-const REMOTE_BASE_URL =  "https://studentsrecordserver-production.up.railway.app/api/v1/student"
+const REMOTE_BASE_URL =  "https://student-records-server.onrender.com"
 
 export const getAllStudentAsync = createAsyncThunk (
     'records/getAllStudentAsync',
     async () => {
-        const response = await fetch(REMOTE_BASE_URL)
+        const response = await fetch(`${REMOTE_BASE_URL}/api/v1/student`)
         if(response.ok){
             const data = await response.json()
             return { data }
@@ -16,7 +16,7 @@ export const getAllStudentAsync = createAsyncThunk (
 export const getAStudentAsync = createAsyncThunk(
     'records/getAStudentAsync',
     async(payload) => {
-        const response = await fetch(`${REMOTE_BASE_URL}/${payload}`)
+        const response = await fetch(`${REMOTE_BASE_URL}/api/v1/student/${payload}`)
         if(response.ok){
             const data = await response.json()
             console.log(data)
@@ -28,7 +28,7 @@ export const getAStudentAsync = createAsyncThunk(
 export const addStudentAsync = createAsyncThunk (
     'records/addStudentAsync',
     async (payload) => {
-        const response = await fetch(`${REMOTE_BASE_URL}/register`, {
+        const response = await fetch(`${REMOTE_BASE_URL}/api/v1/student/register`, {
             method: 'POST',
             headers: {
                 'Content-Type':'application/json',
@@ -45,7 +45,7 @@ export const deleteStudentAsync = createAsyncThunk (
     'records/deleteStudentAsync',
     async(payload) => {
         console.log(payload)
-        const response = await fetch(`${REMOTE_BASE_URL}/${payload}`, {
+        const response = await fetch(`${REMOTE_BASE_URL}/api/v1/student/${payload}`, {
             method: 'DELETE'
         })
         const data = await response.json()
@@ -64,7 +64,7 @@ export const updateStudentAsync = createAsyncThunk (
             address: payload.address,
             email: payload.email,
         }
-        const response = await fetch(`${REMOTE_BASE_URL}/${payload.studentId}`, {
+        const response = await fetch(`${REMOTE_BASE_URL}/api/v1/student/${payload.studentId}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type':'application/json',
